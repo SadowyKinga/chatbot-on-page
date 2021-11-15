@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ProjectTestChatbotIframe</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- <script id="gs-sdk" src='https://chatbot.premiumhotel.pl/' ></script> -->
+  <!-- <script id="gs-sdk" src='//www.buildquickbots.com/botwidget/v3/demo/static/js/sdk.js?v=3' key="2bxx79xx-0dxb-4xx4-ac71-x4a42xxxxxxx"></script> -->
+
+  <!-- <script>
+  (function(w, d) { w.CollectId = "618a49f811c7462f21debfbc"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);
+  </script>  -->
+
+  <script src="https://us-central1-capable-quanta-323811.cloudfunctions.net/chatbot-interface" type="text/javascript"
+    async></script>
+
+    <!-- <script src="https://firebasestorage.googleapis.com/v0/b/ideta-prod.appspot.com/o/bots%2F-MoYpKRTNErSMOqox0aG%2Fscripts%2Fintegration-web.js?alt=media&token=db30e98e-cf3f-46d6-8190-21128d36ad8e" type="text/javascript" async></script> -->
+</head>
+
+
+<!-- https://firebasestorage.googleapis.com/v0/b/ideta-prod.appspot.com/o/users%2F5SSOSaKfQqXq3cFEnIZRYMEs4ra2%2Fmedia%2Fimages%2F-GIF-Support-Bot-super-Nuki.gif-1633605745678?alt=media&token=f83620d8-3b53-413b-9cee-362b5ce1a024 -->
+
+<body>
+  <app-root></app-root>
+</body>
+<style>
+
+  .pending::after {
+    content: '';
+    width: 25px;
+    height: 25px;
+    right: 0%;
+    top: 0%;
+    border-radius: 100%;
+    display: unset
+  }
+
+  div#ideta_i{
+    background-color: #14286e;
+  }
+
+  #ideta_i {
+    color: white;
+    background-color: #FFFFFF
+  }
+
+
+  #ideta_ic {
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+  }
+
+  #ideta_i,
+  #ideta_ii,
+  #ideta_ic {
+    border-radius: 100%;
+  }
+
+  #ideta_ii,
+  #ideta_ff {
+    height: 100%;
+    width: 100%
+  }
+
+  #ideta_f {
+    background-color: white !important;
+    background-image: none !important;
+    background-size: cover;
+    background-position: unset;
+    background-color: #ffffff;
+    border-radius: 0 !important
+  }
+
+  #ideta_fm {
+    width: 100%;
+    height: max-content;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #14286e !important;
+    color: #FFFFFF;
+    border-radius: 1rem
+  }
+
+  #ideta_fi {
+    width: 10%;
+    margin-bottom: 0rem
+  }
+
+  #ideta_ft {
+    max-width: 100%;
+    font-size: 22px;
+    margin-bottom: 2rem
+  }
+
+  #ideta_fx {
+    margin-bottom: 3rem;
+    font-size: 22px
+  }
+
+  #ideta_fb {
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 55%;
+    height: 7%;
+    border-radius: 1rem;
+    color: #183255;
+    border: 2px #183255 solid;
+    box-shadow: #dadada 0 0
+  }
+
+  #ideta_fc {
+    height: 8%;
+    width: 5rem;
+    min-height: 50px;
+    max-height: 70px;
+    top: 0;
+    right: 0;
+    color: white;
+    font-size: 2rem
+  }
+
+  #ideta_ic,
+  #ideta_fc {
+    line-height: 0
+  }
+
+  #ideta_i,
+  #ideta_fb,
+  #ideta_fc {
+    justify-content: center;
+    align-items: center
+  }
+
+  #ideta_c {
+    border-radius: 0.5rem;
+    padding: .2rem;
+    color: #14286e !important;
+    background-color: #FFFFFF
+  }
+
+  #ideta_c::after {
+    content: '';
+    bottom: calc(2px - 10px);
+    background-color: #FFFFFF;
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+    border-top: none !important;
+    border-left: none !important;
+    border-top-left-radius: 100%
+  }
+
+  #ideta_cc {
+    margin: calc(0.5rem * 0.2) calc(0.5rem * 0.2) 0 0
+  }
+
+  #ideta_fc,
+  #ideta_c::after,
+  .pending::after {
+    position: absolute
+  }
+
+  #ideta_i,
+  #ideta_fb,
+  #ideta_fc,
+  #ideta_c {
+    display: flex
+  }
+
+  #ideta_c::after {
+    display: none
+  }
+
+  #ideta_i,
+  #ideta_c,
+  #ideta_c {
+    border: 1px solid #14286e !important
+  }
+
+  #ideta_f {
+    overflow: hidden
+  }
+
+  #ideta_i,
+  #ideta_f,
+  #ideta_c {
+    font-family: sans-serif;
+    position: fixed;
+    right: 25px;
+    box-shadow: #DADADA 0 0 25px;
+    z-index: 2147483447
+  }
+
+  #ideta_i,
+  #ideta_c,
+  #ideta_fc,
+  #ideta_fb {
+    cursor: pointer;
+    font-size: 14px
+  }
+
+  @media only screen and (min-width: 1200px) {
+
+    #ideta_i,
+    #ideta_f,
+    #ideta_c {
+      right: 25px
+    }
+
+    #ideta_ic {
+      font-size: 35px;
+      width: 65px;
+      height: 65px
+    }
+
+    #ideta_f {
+      bottom: calc(25px + 20px + 65px)
+    }
+
+    #ideta_c {
+      bottom: calc(25px + 20px + 65px);
+      border: 1px solid #14286e;
+      box-shadow: 0 0 20px #14286e7d;
+    }
+
+    #ideta_ct {
+      padding: 1rem 1rem 1rem 1rem;
+    }
+
+    #ideta_c::after {
+      right: calc((65px - 10px) / 2)
+    }
+
+    #ideta_i {
+      width: max-content;
+      height: max-content;
+      bottom: 25px
+    }
+
+    #ideta_ii {
+      width: 65px;
+      height: 65px
+    }
+
+    #ideta_f {
+      width: 500px;
+      max-height: 630px;
+    }
+
+    #ideta_fc {
+      display: none
+    }
+  }
+
+  @media only screen and (min-width: 700px) and (max-width: 1199px) {
+
+    #ideta_i,
+    #ideta_f,
+    #ideta_c {
+      right: 20px
+    }
+
+    #ideta_ic {
+      font-size: 35px;
+      width: 65px;
+      height: 65px
+    }
+
+    #ideta_f {
+      bottom: calc(20px + 20px + 65px)
+    }
+
+    #ideta_c {
+      bottom: calc(20px + 20px + 65px)
+    }
+
+    #ideta_ct {
+      padding: 1rem 1rem 1rem 1rem
+    }
+
+    #ideta_c::after {
+      right: calc((65px - 10px) / 2)
+    }
+
+    #ideta_i {
+      width: max-content;
+      height: max-content;
+      bottom: 20px
+    }
+
+    #ideta_ii {
+      width: 65px;
+      height: 65px
+    }
+
+    #ideta_f {
+      width: 500px;
+      max-height: 630px;
+    }
+
+    #ideta_fc {
+      display: none
+    }
+  }
+
+  @media only screen and (max-width: 699px) {
+
+    #ideta_i,
+    #ideta_f,
+    #ideta_c {
+      right: 15px
+    }
+
+    #ideta_ic {
+      font-size: 0px;
+      width: 60px;
+      height: 60px
+    }
+
+    #ideta_f {
+      bottom: 0
+    }
+
+    #ideta_c {
+      bottom: calc(15px + 15px + 60px)
+    }
+
+    #ideta_ct {
+      padding: 0.7rem 0.7rem 0.7rem 0.7rem
+    }
+
+    #ideta_c::after {
+      right: calc((60px - 10px) / 2)
+    }
+
+    #ideta_i {
+      width: max-content;
+      height: max-content;
+      bottom: 15px
+    }
+
+    #ideta_ii {
+      width: 60px;
+      height: 60px
+    }
+
+    #ideta_f {
+      height: 100%;
+      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      bottom: 0 !important;
+      right: 0 !important
+    }
+  }
+</style>
+
+</html>
+<!-- exports.helloWorld = (req, res) => {
+  let message = req.query.message || req.body.message || '
+  function ideta_load_bot(e){
+    ideta_bot_action("load",e)
+  }
+  
+  function ideta_bot_action(e,n){
+    var i,o,t="block",a="display",c="style",s="none",r="innerHTML",f="onclick",u="localStorage",l=window,b=document,m=b.body,v=b.title,p="ideta_";
+    function g(e){
+      try
+      {
+        return l[u].getItem(e)
+      }catch(n){}
+    }
+    
+    function k(e,n){
+      try{l[u].setItem(e,n)}catch(i){}
+    }
+    
+    function h(e){
+      return b.getElementById(e)
+    }
+    
+    function y(e){
+      m.removeChild(e)
+    }
+    
+    function _(){
+      var e=[],t=o?["auid="+o]:[],a=b.cookie?b.cookie.split("; ").map(
+        function(e){
+          e=e.split("=");return{
+            k:e[0],v:e[1]
+          }
+        }
+        ):[];return e.forEach(function(n){switch(n.st){
+          case"c":var e=a.find(function(e){return e.k===n.s
+          }
+          ),i=e&&e.v;break;case"v":i=l[n.s];break;case"l":i=g(n.s)
+        }i!==undefined&&null!==i&&t.push(n.t+"="+i)
+      }),
+      "https://chatbot.premiumhotel.pl/"+t.join("&")
+    }
+    
+    !false||"load"!==e&&"refresh"!==e||(o=g("_iuid"))||(k("_iuid",i=Date.now()+Math.random().toString(36).slice(2)),o=i);var w=h(p+"i"),I=h(p+"f"),x=h(p+"c");switch(e){case"remove":w&&y(w),I&&y(I),x&&y(x),ideta_bll=ideta_oss=0;break;case"show":w&&(w[c][a]="flex"),I&&(I[c][a]=t);break;case"hide":w&&(w[c][a]=s),I&&(I[c][a]=s),x&&(x[c][a]=s);break;case"refresh":var S=h(p+"ff");S&&(S.src=_());break;case"load":if(ideta_oss)break;function T(){L||ideta_bll||1!==M||(P.src=_(),ideta_bll=!(L=!1))}function A(e,n){n.appendChild(e)}function D(e){return b.createElement(e||"div")}function N(){1===M?(Y[a]=X[a]="flex",W[a]=ee[a]=s,U()):(Y[a]=X[a]=s,W[a]=t,P.url&&P.contentWindow&&P.contentWindow.postMessage("v2bnpga",d))}function O(){A(F,R),A(K,R),A(R,m),A(P,j),A(Q,j),false||L?(Z[a]=s,E[f]=function(){$[a]=s,Z[a]=t,L=!1,T()},A(H,q),A(z,q),A(B,q),A(E,q),A(q,j)):T(),A(j,m),A(J,G),A(V,G),true&&setTimeout(function(){ideta_oss&&A(G,m)},2000),ideta_lss=ideta_oss=!0}function U(){R.className="",clearInterval(C),C=null,b.title=v}var C,L=true,S=false||"open"===n||!0===n,M=S?1:-1,F=D("img"),H=D("img"),P=D("iframe"),R=D(),j=D(),q=D(),z=D(),B=D(),E=D(),G=D(),J=D(),K=D(),Q=D(),V=D(),W=F[c],X=K[c],Y=j[c],Z=P[c],$=q[c],ee=G[c];P.frameBorder="0",!S&&false&&(M=g("_idis")||-1),R.id=p+"i",F.id=p+"ii",K.id=p+"ic",j.id=p+"f",P.id=p+"ff",Q.id=p+"fc",q.id=p+"fm",H.id=p+"fi",z.id=p+"ft",B.id=p+"fx",E.id=p+"fb",G.id=p+"c",J.id=p+"ct",V.id=p+"cc",F.src="",K[r]=Q[r]=V[r]="x",H.src="",z[r]="",B[r]="",E[r]=o,J[r]="W czym możemy Ci pomóc?",R[f]=Q[f]=J[f]=function(){M*=-1,T(),N(),false&&k("_idis",M)},V[f]=function(){ee[a]=s},N(),ideta_lss?O():((S=D("link")).rel="stylesheet",S.type="text/css",S.href="https://firebasestorage.googleapis.com/v0/b/ideta-prod.appspot.com/o/bots%2F-Mo3NlRW_tSQUEfEAM74%2Fscripts%2Fintegration-web.css?alt=media&token=90a9c856-a01b-4d00-9d11-d2b72b1dae1d",A(S,b.getElementsByTagName("head")[0]),S.onload=O),l.addEventListener("message",function(e){if("string"==typeof e.data){var n,i=e.data.split(";"),e=i[0],t=i[1];switch(e){case"z64tefu":R.className="pending",C=C||setInterval(function(){b.title=n?v:"Nouveau Message !",n=!n},2e3);break;case"dj9y4b8":U();break;case"k120eks":l.location=t}}})}}var ideta_oss,ideta_lss,ideta_bll;true&&ideta_bot_action("load");';
+  res.status(200).send(message);
+};
+
+
+
+exports.helloWorld = (req, res) => {
+  let message = req.query.message || req.body.message || 'function ideta_load_bot(e){ideta_bot_action("load",e)}function ideta_bot_action(e,n){var i,o,t="block",a="display",c="style",s="none",r="innerHTML",f="onclick",u="localStorage",l=window,b=document,m=b.body,v=b.title,p="ideta_";function g(e){try{return l[u].getItem(e)}catch(n){}}function k(e,n){try{l[u].setItem(e,n)}catch(i){}}function h(e){return b.getElementById(e)}function y(e){m.removeChild(e)}function _(){var e=[],t=o?["auid="+o]:[],a=b.cookie?b.cookie.split("; ").map(function(e){e=e.split("=");return{k:e[0],v:e[1]}}):[];return e.forEach(function(n){switch(n.st){case"c":var e=a.find(function(e){return e.k===n.s}),i=e&&e.v;break;case"v":i=l[n.s];break;case"l":i=g(n.s)}i!==undefined&&null!==i&&t.push(n.t+"="+i)}),"https://chatbot.premiumhotel.pl/"+t.join("&")}!false||"load"!==e&&"refresh"!==e||(o=g("_iuid"))||(k("_iuid",i=Date.now()+Math.random().toString(36).slice(2)),o=i);var w=h(p+"i"),I=h(p+"f"),x=h(p+"c");switch(e){case"remove":w&&y(w),I&&y(I),x&&y(x),ideta_bll=ideta_oss=0;break;case"show":w&&(w[c][a]="flex"),I&&(I[c][a]=t);break;case"hide":w&&(w[c][a]=s),I&&(I[c][a]=s),x&&(x[c][a]=s);break;case"refresh":var S=h(p+"ff");S&&(S.src=_());break;case"load":if(ideta_oss)break;function T(){L||ideta_bll||1!==M||(P.src=_(),ideta_bll=!(L=!1))}function A(e,n){n.appendChild(e)}function D(e){return b.createElement(e||"div")}function N(){1===M?(Y[a]=X[a]="flex",W[a]=ee[a]=s,U()):(Y[a]=X[a]=s,W[a]=t,P.url&&P.contentWindow&&P.contentWindow.postMessage("v2bnpga",d))}function O(){A(F,R),A(K,R),A(R,m),A(P,j),A(Q,j),false||L?(Z[a]=s,E[f]=function(){$[a]=s,Z[a]=t,L=!1,T()},A(H,q),A(z,q),A(B,q),A(E,q),A(q,j)):T(),A(j,m),A(J,G),A(V,G),true&&setTimeout(function(){ideta_oss&&A(G,m)},2000),ideta_lss=ideta_oss=!0}function U(){R.className="",clearInterval(C),C=null,b.title=v}var C,L=true,S=false||"open"===n||!0===n,M=S?1:-1,F=D("img"),H=D("img"),P=D("iframe"),R=D(),j=D(),q=D(),z=D(),B=D(),E=D(),G=D(),J=D(),K=D(),Q=D(),V=D(),W=F[c],X=K[c],Y=j[c],Z=P[c],$=q[c],ee=G[c];P.frameBorder="0",!S&&false&&(M=g("_idis")||-1),R.id=p+"i",F.id=p+"ii",K.id=p+"ic",j.id=p+"f",P.id=p+"ff",Q.id=p+"fc",q.id=p+"fm",H.id=p+"fi",z.id=p+"ft",B.id=p+"fx",E.id=p+"fb",G.id=p+"c",J.id=p+"ct",V.id=p+"cc",F.src="",K[r]=Q[r]=V[r]="x",H.src="",z[r]="",B[r]="",E[r]="https://chatbot.premiumhotel.pl/"+t.join("&"),J[r]="W czym możemy Ci pomóc?",R[f]=Q[f]=J[f]=function(){M*=-1,T(),N(),false&&k("_idis",M)},V[f]=function(){ee[a]=s},N(),ideta_lss?O():((S=D("link")).rel="stylesheet",S.type="text/css",S.href="https://firebasestorage.googleapis.com/v0/b/ideta-prod.appspot.com/o/bots%2F-Mo3NlRW_tSQUEfEAM74%2Fscripts%2Fintegration-web.css?alt=media&token=90a9c856-a01b-4d00-9d11-d2b72b1dae1d",A(S,b.getElementsByTagName("head")[0]),S.onload=O),l.addEventListener("message",function(e){if("string"==typeof e.data){var n,i=e.data.split(";"),e=i[0],t=i[1];switch(e){case"z64tefu":R.className="pending",C=C||setInterval(function(){b.title=n?v:"Nouveau Message !",n=!n},2e3);break;case"dj9y4b8":U();break;case"k120eks":l.location=t}}})}}var ideta_oss,ideta_lss,ideta_bll;true&&ideta_bot_action("load");';
+  res.status(200).send(message);
+}; -->
+
+
+
+<!-- ; -->
