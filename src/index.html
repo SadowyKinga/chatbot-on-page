@@ -28,6 +28,8 @@
 </body>
 <style>
 
+
+
   .pending::after {
     content: '';
     width: 25px;
@@ -111,6 +113,15 @@
     border: 2px #183255 solid;
     box-shadow: #dadada 0 0
   }
+
+  div#ideta_fc{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: -10px;
+    margin: auto;
+    top: 8px;
+}
 
   #ideta_fc {
     height: 8%;
@@ -211,6 +222,11 @@
       right: 25px
     }
 
+    /* div#ideta_fc{
+  top: 2.3em!important;
+  right: -2.5em!important;
+} */
+
     #ideta_ic {
       font-size: 35px;
       width: 65px;
@@ -256,13 +272,17 @@
     }
   }
 
-  @media only screen and (min-width: 700px) and (max-width: 1199px) {
+  @media only screen and (min-width: 521px) and (max-width: 1199px) {
 
     #ideta_i,
     #ideta_f,
     #ideta_c {
       right: 20px
     }
+
+    div#ideta_fc{
+    top: 7px;
+}
 
     #ideta_ic {
       font-size: 35px;
@@ -307,8 +327,10 @@
     }
   }
 
-  @media only screen and (max-width: 699px) {
-
+  @media only screen and (max-width: 520px) {
+    div#ideta_fc{
+    top: 0;
+  }
     #ideta_i,
     #ideta_f,
     #ideta_c {
