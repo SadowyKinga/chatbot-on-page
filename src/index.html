@@ -6,380 +6,40 @@
   <title>ProjectTestChatbotIframe</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <script src="https://us-central1-capable-quanta-323811.cloudfunctions.net/chatbot-interface" type="text/javascript"
-    async>
 
-  </script>
+  <style>
+    :root {
+      --primary: #14286e;
+    }
 
-    <!-- <script src="https://firebasestorage.googleapis.com/v0/b/ideta-prod.appspot.com/o/bots%2F-MoYpKRTNErSMOqox" type="text/javascript" async></script> -->
+    #ideta_i {
+      background-color: var(--primary) !important;
+      border: var(--primary) !important;
+    }
+
+    #ideta_c,
+    #ideta_c::after {
+      border: 1px solid var(--primary) !important;
+    }
+
+    #ideta_c {
+      color: var(--primary) !important;
+    }
+  </style>
 </head>
 
 <body>
   <app-root></app-root>
-</body>
-<style>
-/* .pending::after {
-      content: '';
-      width: 25px;
-      height: 25px;
-      right: 0%;
-      top: 0%;
-      border-radius: 100%;
-      display: unset
-    }
   
-    div#ideta_i{
-      background-color: #14286e;
-    }
-  
-    #ideta_i {
-      color: white;
-      background-color: #FFFFFF
-    }
-  
-  
-    #ideta_ic {
-      justify-content: center;
-      align-items: center;
-      overflow: hidden
-    }
-  
-    #ideta_i,
-    #ideta_ii,
-    #ideta_ic {
-      border-radius: 100%;
-    }
-  
-    #ideta_ii,
-    #ideta_ff {
-      height: 100%;
-      width: 100%
-    }
-  
-    #ideta_f {
-      background-color: white !important;
-      background-image: none !important;
-      background-size: cover;
-      background-position: unset;
-      background-color: #ffffff;
-      border-radius: 0 !important
-    }
-  
-    #ideta_fm {
-      width: 100%;
-      height: max-content;
-      margin: 1rem;
-      padding: 1rem;
-      background-color: transparent;
-      color: #FFFFFF;
-      border-radius: 1rem
-    }
-  
-    #ideta_fi {
-      width: 10%;
-      margin-bottom: 0rem
-    }
-  
-    #ideta_ft {
-      max-width: 100%;
-      font-size: 22px;
-      margin-bottom: 2rem
-    }
-  
-    #ideta_fx {
-      margin-bottom: 3rem;
-      font-size: 22px
-    }
-  
-    #ideta_fb {
-      position: absolute;
-      background-color: transparent;
-      width: 55%;
-      height: 7%;
-      left: calc((100% - 55%) / 2);
-  
-      border-radius: 1rem;
-      color: transparent;
-      border: 2px transparent solid;
-      box-shadow: #dadada 0 0
-    }
-  
-    div#ideta_fc{
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      right: -10px;
-      margin: auto;
-      top: 8px;
-  }
-  
-    #ideta_fc {
-      height: 8%;
-      width: 5rem;
-      min-height: 50px;
-      max-height: 70px;
-      top: 0;
-      right: 0;
-      color: white;
-      font-size: 2rem
-    }
-  
-    #ideta_ic,
-    #ideta_fc {
-      line-height: 0
-    }
-  
-    #ideta_i,
-    #ideta_fb,
-    #ideta_fc {
-      justify-content: center;
-      align-items: center
-    }
-  
-    #ideta_c {
-      border-radius: 0.5rem;
-      padding: .2rem;
-      color: #14286e !important;
-      background-color: #FFFFFF
-    }
-  
-    #ideta_c::after {
-      content: '';
-      bottom: calc(2px - 10px);
-      background-color: #FFFFFF;
-      width: 15px;
-      height: 15px;
-      transform: rotate(45deg);
-      border-top: none !important;
-      border-left: none !important;
-      border-top-left-radius: 100%
-    }
-  
-    #ideta_cc {
-      margin: calc(0.5rem * 0.2) calc(0.5rem * 0.2) 0 0
-    }
-  
-    #ideta_fc,
-    #ideta_c::after,
-    .pending::after {
-      position: absolute
-    }
-  
-    #ideta_i,
-    #ideta_fb,
-    #ideta_fc,
-    #ideta_c {
-      display: flex
-    }
-  
-    #ideta_c::after {
-      display: none
-    }
-  
-    #ideta_i,
-    #ideta_c,
-    #ideta_c {
-      border: 1px solid #14286e !important
-    }
-  
-    #ideta_f {
-      overflow: hidden
-    }
-  
-    #ideta_i,
-    #ideta_f,
-    #ideta_c {
-      font-family: sans-serif;
-      position: fixed;
-      right: 25px;
-      box-shadow: #DADADA 0 0 25px;
-      z-index: 2147483447
-    }
-  
-    #ideta_i,
-    #ideta_c,
-    #ideta_fc,
-    #ideta_fb {
-      cursor: pointer;
-      font-size: 14px
-    }
-  
-    @media only screen and (min-width: 1200px) {
-  
-      #ideta_i,
-      #ideta_f,
-      #ideta_c {
-        right: 25px
-      }
-  
-      /* div#ideta_fc{
-    top: 2.3em!important;
-    right: -2.5em!important;
-  } */
-  /*
-  #ideta_ic {
-        font-size: 35px;
-        width: 65px;
-        height: 65px
-      }
-  
-      #ideta_f {
-        bottom: calc(25px + 20px + 65px)
-      }
-  
-      #ideta_c {
-        bottom: calc(25px + 20px + 65px);
-        border: 1px solid #14286e;
-        box-shadow: 0 0 20px #14286e7d;
-      }
-  
-      #ideta_ct {
-        padding: 1rem 1rem 1rem 1rem;
-      }
-  
-      #ideta_c::after {
-        right: calc((65px - 10px) / 2)
-      }
-  
-      #ideta_i {
-        width: max-content;
-        height: max-content;
-        bottom: 25px
-      }
-  
-      #ideta_ii {
-        width: 65px;
-        height: 65px
-      }
-  
-      #ideta_f {
-        height: 700px;
-              width: 400px;
-              max-width: calc(100% - 25px * 2);
-              max-height: calc(100% - 25px - 20px - 25px - 65px)
-      }
-  
-      #ideta_fc {
-        display: block
-      }
-    }
-  
-    @media only screen and (min-width: 521px) and (max-width: 1199px) {
-  
-      #ideta_i,
-      #ideta_f,
-      #ideta_c {
-        right: 20px
-      }
-  
-      div#ideta_fc{
-      top: 7px;
-  }
-  
-      #ideta_ic {
-        font-size: 35px;
-        width: 65px;
-        height: 65px
-      }
-  
-      #ideta_f {
-        bottom: calc(20px + 20px + 65px)
-      }
-  
-      #ideta_c {
-        bottom: calc(20px + 20px + 65px)
-      }
-  
-      #ideta_ct {
-        padding: 1rem 1rem 1rem 1rem
-      }
-  
-      #ideta_c::after {
-        right: calc((65px - 10px) / 2)
-      }
-  
-      #ideta_i {
-        width: max-content;
-        height: max-content;
-        bottom: 20px
-      }
-  
-      #ideta_ii {
-        width: 65px;
-        height: 65px
-      }
-  
-      #ideta_f {
-        width: 500px;
-        max-height: 630px;
-      }
-  
-      #ideta_fc {
-        display: block
-      }
-    }
-  
-    @media only screen and (max-width: 520px) {
-      div#ideta_fc{
-      top: 6px;
-    }
-      #ideta_i,
-      #ideta_f,
-      #ideta_c {
-        right: 15px
-      }
-  
-      #ideta_ic {
-        font-size: 0px;
-        width: 60px;
-        height: 60px
-      }
-  
-      #ideta_f {
-        bottom: 0
-      }
-  
-      #ideta_c {
-        bottom: calc(15px + 15px + 60px);
-        width: 100px;
-      }
-  
-      #ideta_ct {
-        padding: 0.7rem 0.7rem 0.7rem 0.7rem
-      }
-  
-      #ideta_c::after {
-        right: calc((60px - 10px) / 2)
-      }
-  
-      #ideta_i {
-        width: max-content;
-        height: max-content;
-        bottom: 15px
-      }
-  
-      #ideta_ii {
-        width: 60px;
-        height: 60px
-      }
-  
-      #ideta_f {
-        height: 100%;
-        width: 100%;
-        max-width: 100%;
-        max-height: 100%;
-        bottom: 0 !important;
-        right: 0 !important
-      }
-    } */
-  .pending::after{content:'';width:25px;height:25px;right:0%;top:0%;background-color:#D30000;border-radius:100%;display:unset}#ideta_i{color:white;background-color:#14286e}#ideta_ic{justify-content: center;align-items: center;overflow:hidden}#ideta_i,#ideta_ii,#ideta_ic{border-radius:100%}#ideta_ii,#ideta_ff{height:100%;width:100%}#ideta_f{background-color:white);background-size:cover;background-position:unset;background-color:#ffffff;border-radius:0}#ideta_fm{width:100%;height:max-content;margin:1rem;padding:1rem;background-color:#14286e;color:#FFFFFF;border-radius:1rem}#ideta_fi{width:10%;margin-bottom:0rem}#ideta_ft{max-width:100%;font-size:22px;margin-bottom:2rem}#ideta_fx{margin-bottom:3rem;font-size:22px}#ideta_fb{position:absolute;background-color:#FFFFFF;width:55%;height:7%;left:calc((100% - 55%) / 2);border-radius:1rem;color:#183255;border:2px #183255 solid;box-shadow:#dadada 0 0 0}#ideta_fc{display:flex;flex-direction:column;position:absolute;right:-10px;height:8%;width:5rem;min-height:50px;max-height:70px;top:0;right:0;color:white;font-size:2rem}#ideta_ic,#ideta_fc{line-height:0}#ideta_i,#ideta_fb,#ideta_fc{justify-content:center;align-items:center}#ideta_c{border-radius:0.5rem;padding:.2rem;color:#14286e;background-color:#FFFFFF}#ideta_c::after{content:'';bottom:calc(2px - 10px);background-color:#FFFFFF;width:15px;height:15px;transform:rotate(45deg);border-top:none!important;border-left:none!important;border-top-left-radius:100%}#ideta_cc{margin:calc(0.5rem * 0.2) calc(0.5rem * 0.2) 0 0}#ideta_fc,#ideta_c::after,.pending::after{position:absolute}#ideta_i,#ideta_fb,#ideta_fc,#ideta_c,#ideta_c::after{display:flex}#ideta_i,#ideta_c,#ideta_c::after{border:1px solid #14286e}#ideta_f{overflow:hidden}#ideta_i,#ideta_f,#ideta_c{font-family:sans-serif;position:fixed;right:25px;box-shadow:#DADADA 0 0 25px;z-index:2147483447}#ideta_i,#ideta_c,#ideta_fc,#ideta_fb{cursor:pointer;font-size:14px}@media only screen and (min-width: 1200px){#ideta_fc{display:flex!important;flex-direction:column;position:absolute;right:-10px;margin: auto;top: 8px;}#ideta_i,#ideta_f,#ideta_c{right:25px}#ideta_ic{font-size:35px;width:65px;height:65px}#ideta_f{bottom:calc(25px + 20px + 65px)}#ideta_c{bottom:calc(25px + 20px + 65px)}#ideta_ct{padding:1rem 1rem 1rem 1rem}#ideta_c::after{right:calc((65px - 10px) / 2)}#ideta_i{width:max-content;height:max-content;bottom:25px}#ideta_ii{width:65px;height:65px}#ideta_f{height:700px;width:400px;max-width:calc(100% - 25px * 2);max-height:calc(100% - 25px - 20px - 25px - 65px)}#ideta_fc{display:block}}      @media only screen and (min-width: 521px) and (max-width: 1199px){#ideta_i,#ideta_f,#ideta_c{right:20px}#ideta_fc{top:7px;}#ideta_ic{font-size:35px;width:65px;height:65px}#ideta_f{bottom:calc(20px + 20px + 65px)}#ideta_c{bottom:calc(20px + 20px + 65px)}#ideta_ct{padding:1rem 1rem 1rem 1rem}#ideta_c::after{right:calc((65px - 10px) / 2)}#ideta_i{width:max-content;height:max-content;bottom:20px}#ideta_ii{width:65px;height:65px}#ideta_f{height:600px;width:400px;max-width:calc(100% - 20px * 2);max-height:calc(100% - 20px - 20px - 20px - 65px)}#ideta_fc{display:block}}@media only screen and (max-width: 520px){#ideta_fc{top: 2px;right: -10px;}#ideta_fc{top:6px}#ideta_i,#ideta_f,#ideta_c{right:15px}#ideta_ic{font-size:0px;width:60px;height:60px}#ideta_f{bottom:calc(15px + 15px + 60px)}#ideta_c{bottom:calc(15px + 15px + 60px)}#ideta_ct{padding:0.7rem 0.7rem 0.7rem 0.7rem}#ideta_c::after{right:calc((60px - 10px) / 2)}#ideta_i{width:max-content;height:max-content;bottom:15px}#ideta_ii{width:60px;height:60px}#ideta_f{height:100%;width:100%;max-width:100%;max-height:100%;bottom:0!important;right:0!important}}
+  <script id="chatbot-script" data-valueprimary="1976d2" data-valuesecondary="1976d2"
+    src="https://us-central1-capable-quanta-323811.cloudfunctions.net/chatbot-interface/" type="text/javascript"
+    async></script> 
       
-</style>
-</html>
+  <script>
+    var urlFragments = document.getElementById("chatbot-script")
+    document.documentElement.style.setProperty('--primary', "#" + urlFragments.dataset.valueprimary)
+  </script>
 
-<!-- 
-exports.helloWorld = (req, res) => {
-  let message = req.query.message || req.body.message || 'function ideta_load_bot(t){ideta_bot_action("load",t)}function ideta_bot_action(t,e){var i,a="block",n="display",o="style",c="none",s="innerHTML",l="onclick",r="localStorage",f=window,u=document,p=u.body,b=u.title,m="ideta_";function h(t){try{return f[r].getItem(t)}catch(t){}}function k(t){return u.getElementById(t)}function _(t){p.removeChild(t)}function v(){var t=i?["auid="+i]:[],e=u.cookie?u.cookie.split("; ").map(function(t){return{k:(t=t.split("="))[0],v:t[1]}}):[];return[].forEach(function(i){switch(i.st){case"c":var a=e.find(function(t){return t.k===i.s}),n=a&&a.v;break;case"v":n=f[i.s];break;case"l":n=h(i.s)}null!=n&&t.push(i.t+"="+n)}),"https://chatbot.premiumhotel.pl/"+t.join("&")}var y=k(m+"i"),g=k(m+"f"),w=k(m+"c");switch(t){case"remove":y&&_(y),g&&_(g),w&&_(w),ideta_bll=ideta_oss=0;break;case"show":y&&(y[o][n]="block"),g&&(g[o][n]=a);break;case"hide":y&&(y[o][n]=c),g&&(g[o][n]=c),w&&(w[o][n]=c);break;case"refresh":(T=k(m+"ff"))&&(T.src=v());break;case"load":if(ideta_oss)break;function E(){W||ideta_bll||1!==j||(q.src=v(),ideta_bll=!(W=!1))}function I(t,e){e.appendChild(t)}function N(t){return u.createElement(t||"div")}function x(){1===j?(V[n]="block",U[n]="flex",R[n]=Z[n]=c,C()):(V[n]=U[n]=c,R[n]=a,q.url&&q.contentWindow&&q.contentWindow.postMessage("v2bnpga",d))}function B(){I(z,H),I(O,H),I(H,p),I(q,S),I(P,S),W?(X[n]=a,G[l]=function(){Y[n]=a,X[n]=a,W=!1,E()},I(L,A),I(D,A),I(F,A),I(G,A),I(A,S)):E(),I(S,p),I(K,J),I(Q,J),setTimeout(function(){ideta_oss&&I(J,p)},2e3),ideta_lss=ideta_oss=!0}function C(){H.className="",clearInterval(M),M=null,u.title=b}var M,T,W=!0,j=(T="open"===e||!0===e)?1:-1,z=N("img"),L=N("img"),q=N("iframe"),H=N(),S=N(),A=N(),D=N(),F=N(),G=N(),J=N(),K=N(),O=N(),P=N(),Q=N(),R=z[o],U=O[o],V=S[o],X=q[o],Y=A[o],Z=J[o];q.frameBorder="0",q.src="https://chatbot.premiumhotel.pl/",H.id=m+"i",z.id=m+"ii",O.id=m+"ic",S.id=m+"f",q.id=m+"ff",P.id=m+"fc",A.id=m+"fm",L.id=m+"fi",D.id=m+"ft",F.id=m+"fx",G.id=m+"fb",J.id=m+"c",K.id=m+"ct",Q.id=m+"cc",z.src="https://raw.githubusercontent.com/SadowyKinga/chatbot---react/master/ikona.png?token=APJKHPDLLZU5V74343PGWUDBSYACK",O[s]=P[s]=Q[s]="✕",L.src="https://raw.githubusercontent.com/SadowyKinga/chatbot---react/master/ikona.png?token=APJKHPDLLZU5V74343PGWUDBSYACK",D[s]="",F[s]="",K[s]="W czym możemy Ci pomóc?",H[l]=P[l]=K[l]=function(){j*=-1,E(),x()},Q[l]=function(){Z[n]=c},x(),ideta_lss?B():((T=N("link")).rel="stylesheet",T.type="text/css",T.href="https://us-central1-capable-quanta-323811.cloudfunctions.net/chatbot-style?alt=media",I(T,u.getElementsByTagName("head")[0]),T.onload=B),f.addEventListener("message",function(t){if("string"==typeof t.data){var e,i=t.data.split(";"),a=(t=i[0],i[1]);switch(t){case"z64tefu":H.className="pending",M=M||setInterval(function(){u.title=e?b:"Nouveau Message !",e=!e},2e3);break;case"dj9y4b8":C();break;case"k120eks":f.location=a}}},G[s]="https://chatbot.premiumhotel.pl/")}}var ideta_oss,ideta_lss,ideta_bll;ideta_bot_action("load");';
-  res.status(200).send(message);
-}; -->
+</body>
+
+</html>
