@@ -69,7 +69,7 @@ function ideta_bot_action(t, e) {
             g && (g[o][n] = c), v && (v[o][n] = c), y && (y[o][n] = c);
             break;
         case "refresh":
-            (B = b(h + "ff")) && (B.src = k());
+            (B = b( + "ff")) && (B.src = k());
             break;
         case "load":
             if (ideta_oss) break;
@@ -80,7 +80,7 @@ function ideta_bot_action(t, e) {
                 e.appendChild(t);
             }
             function E(t) {
-                return f.createElement(t || "div");
+                return document.createElement(t || "div");
             }
             function T() {
                 1 === M ? ((Q[n] = "block"), (O[n] = "flex"), (K[n] = Y[n] = c), N()) : ((Q[n] = O[n] = c), (K[n] = a), z.url && z.contentWindow && z.contentWindow.postMessage("v2bnpga", d));
@@ -111,7 +111,7 @@ function ideta_bot_action(t, e) {
                     (ideta_lss = ideta_oss = !0);
             }
             function N() {
-                (S.className = ""), clearInterval(x), (x = null), (f.title = p);
+                (S.className = ""), clearInterval(x), (x = null), (document.title = document.title);
             }
             var x,
                 B,
