@@ -139,20 +139,20 @@ function ideta_bot_action(t, e) {
                 Y = A[o];
             (z.frameBorder = "0"),
                 (z.src = `https://chatbot.premiumhotel.pl/?primary=${primaryValue}&secondary=${secondaryValue}`),
-                (S.id = h + "i"),
-                (W.id = h + "ii"),
-                (F.id = h + "ic"),
-                (H.id = h + "f"),
-                (z.id = h + "ff"),
-                (G.id = h + "fc"),
-                (P.id = h + "fm"),
-                (j.id = h + "fi"),
-                (R.id = h + "ft"),
-                (U.id = h + "fx"),
-                (q.id = h + "fb"),
-                (A.id = h + "c"),
-                (D.id = h + "ct"),
-                (J.id = h + "cc"),
+                (S.id = "ideta_" + "i"),
+                (W.id = "ideta_" + "ii"),
+                (F.id = "ideta_" + "ic"),
+                (H.id = "ideta_" + "f"),
+                (z.id = "ideta_" + "ff"),
+                (G.id = "ideta_" + "fc"),
+                (P.id = "ideta_" + "fm"),
+                (j.id = "ideta_" + "fi"),
+                (R.id = "ideta_" + "ft"),
+                (U.id = "ideta_" + "fx"),
+                (q.id = "ideta_" + "fb"),
+                (A.id = "ideta_" + "c"),
+                (D.id = "ideta_" + "ct"),
+                (J.id = "ideta_" + "cc"),
                 (W.src = "https://marionnaud.sourdline.com/img/ClearTchat.png"),
                 (F[s] = G[s] = J[s] = "✕"),
                 (j.src = "https://marionnaud.sourdline.com/img/ClearTchat.png"),
@@ -180,18 +180,18 @@ function ideta_bot_action(t, e) {
                                         (x =
                                             x ||
                                             setInterval(function () {
-                                                (f.title = e ? p : "Nouveau Message !"), (e = !e);
+                                                (f.title = e ? document.title : "Nouveau Message !"), (e = !e);
                                             }, 2e3));
                                     break;
                                 case "dj9y4b8":
                                     N();
                                     break;
                                 case "k120eks":
-                                    u.location = a;
+                                    window.location = a;
                             }
                         }
                     },
-                    (q[s] = "https://chatbot.premiumhotel.pl/")
+                    (q["innerHTML"] = "https://chatbot.premiumhotel.pl/")
                 );
     }
 }
