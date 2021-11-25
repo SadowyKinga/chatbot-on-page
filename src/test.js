@@ -1,23 +1,14 @@
 var urlFragments = document.getElementById("chatbot-script");
 const primaryValue = urlFragments.dataset.valueprimary;
 const secondaryValue = urlFragments.dataset.valuesecondary;
-function ideta_load_bot(t) {
-    ideta_bot_action("load", t);
+function chatbot_load(t) {
+    chatbot_action("load", t);
 }
-function ideta_bot_action(t, e) {
+function chatbot_action(t, e) {
     var i,
         a = "block",
-        n = "display",
-        o = "style",
         c = "none",
-        s = "innerHTML",
-        r = "onclick",
-        l = "localStorage",
-        u = window,
-        f = document,
-        m = document.body,
-        p = document.title,
-        h = "ideta_";
+        m = document.body;
     function b(t) {
         return document.getElementById(t);
     }
@@ -36,45 +27,45 @@ function ideta_bot_action(t, e) {
                 switch (i.st) {
                     case "c":
                         var a = e.find(function (t) {
-                                return t.k === i.s;
+                                return t.k === i["innerHTML"];
                             }),
                             n = a && a.v;
                         break;
                     case "v":
-                        n = window[i.s];
+                        n = window[i["innerHTML"]];
                         break;
                     case "l":
                         n = (function (t) {
                             try {
-                                return window[l].getItem(t);
+                                return window["localStorage"].getItem(t);
                             } catch (t) {}
-                        })(i.s);
+                        })(i["innerHTML"]);
                 }
                 null != n && t.push(i.t + "=" + n);
             }),
             `https://chatbot.premiumhotel.pl/` + t.join("&")
         );
     }
-    var g = b("ideta_" + "i"),
-        v = b("ideta_" + "f"),
-        y = b("ideta_" + "c");
+    var g = b("chatbot_" + "i"),
+        v = b("chatbot_" + "f"),
+        y = b("chatbot_" + "c");
     switch (t) {
         case "remove":
-            g && _(g), v && _(v), y && _(y), (ideta_bll = ideta_oss = 0);
+            g && _(g), v && _(v), y && _(y), (chatbot_bll = chatbot_oss = 0);
             break;
         case "show":
-            g && (g[o][n] = "block"), v && (v[o][n] = a);
+            g && (g["style"]["display"] = "block"), v && (v["style"]["display"] = a);
             break;
         case "hide":
-            g && (g[o][n] = c), v && (v[o][n] = c), y && (y[o][n] = c);
+            g && (g["style"]["display"] = c), v && (v["style"]["display"] = c), y && (y["style"]["display"] = c);
             break;
         case "refresh":
             (B = b( + "ff")) && (B.src = k());
             break;
         case "load":
-            if (ideta_oss) break;
+            if (chatbot_oss) break;
             function w() {
-                L || ideta_bll || 1 !== M || ((z.src = k()), (ideta_bll = !(L = !1)));
+                L || chatbot_bll || 1 !== M || ((z.src = k()), (chatbot_bll = !(L = !1)));
             }
             function C(t, e) {
                 e.appendChild(t);
@@ -83,7 +74,7 @@ function ideta_bot_action(t, e) {
                 return document.createElement(t || "div");
             }
             function T() {
-                1 === M ? ((Q[n] = "block"), (O[n] = "flex"), (K[n] = Y[n] = c), N()) : ((Q[n] = O[n] = c), (K[n] = a), z.url && z.contentWindow && z.contentWindow.postMessage("v2bnpga", d));
+                1 === M ? ((Q["display"] = "block"), (O["display"] = "flex"), (K["display"] = Y["display"] = "none"), N()) : ((Q["display"] = O["display"] = "none"), (K["display"] = "block"), z.url && z.contentWindow && z.contentWindow.postMessage("v2bnpga", d));
             }
             function I() {
                 C(W, S),
@@ -92,9 +83,9 @@ function ideta_bot_action(t, e) {
                     C(z, H),
                     C(G, H),
                     L
-                        ? ((V[n] = a),
-                          (q[r] = function () {
-                              (X[n] = a), (V[n] = a), (L = !1), w();
+                        ? ((V["display"] = a),
+                          (q["onclick"] = function () {
+                              (X["display"] = a), (V["display"] = a), (L = !1), w();
                           }),
                           C(j, P),
                           C(R, P),
@@ -106,9 +97,9 @@ function ideta_bot_action(t, e) {
                     C(D, A),
                     C(J, A),
                     setTimeout(function () {
-                        ideta_oss && C(A, m);
+                        chatbot_oss && C(A, m);
                     }, 2e3),
-                    (ideta_lss = ideta_oss = !0);
+                    (chatbot_lss = chatbot_oss = !0);
             }
             function N() {
                 (S.className = ""), clearInterval(x), (x = null), (document.title = document.title);
@@ -131,43 +122,43 @@ function ideta_bot_action(t, e) {
                 F = E(),
                 G = E(),
                 J = E(),
-                K = W[o],
-                O = F[o],
-                Q = H[o],
-                V = z[o],
-                X = P[o],
-                Y = A[o];
+                K = W["style"],
+                O = F["style"],
+                Q = H["style"],
+                V = z["style"],
+                X = P["style"],
+                Y = A["style"];
             (z.frameBorder = "0"),
                 (z.src = `https://chatbot.premiumhotel.pl/?primary=${primaryValue}&secondary=${secondaryValue}`),
-                (S.id = "ideta_" + "i"),
-                (W.id = "ideta_" + "ii"),
-                (F.id = "ideta_" + "ic"),
-                (H.id = "ideta_" + "f"),
-                (z.id = "ideta_" + "ff"),
-                (G.id = "ideta_" + "fc"),
-                (P.id = "ideta_" + "fm"),
-                (j.id = "ideta_" + "fi"),
-                (R.id = "ideta_" + "ft"),
-                (U.id = "ideta_" + "fx"),
-                (q.id = "ideta_" + "fb"),
-                (A.id = "ideta_" + "c"),
-                (D.id = "ideta_" + "ct"),
-                (J.id = "ideta_" + "cc"),
+                (S.id = "chatbot_" + "i"),
+                (W.id = "chatbot_" + "ii"),
+                (F.id = "chatbot_" + "ic"),
+                (H.id = "chatbot_" + "f"),
+                (z.id = "chatbot_" + "ff"),
+                (G.id = "chatbot_" + "fc"),
+                (P.id = "chatbot_" + "fm"),
+                (j.id = "chatbot_" + "fi"),
+                (R.id = "chatbot_" + "ft"),
+                (U.id = "chatbot_" + "fx"),
+                (q.id = "chatbot_" + "fb"),
+                (A.id = "chatbot_" + "c"),
+                (D.id = "chatbot_" + "ct"),
+                (J.id = "chatbot_" + "cc"),
                 (W.src = "https://marionnaud.sourdline.com/img/ClearTchat.png"),
-                (F[s] = G[s] = J[s] = "✕"),
+                (F["innerHTML"] = G["innerHTML"] = J["innerHTML"] = "✕"),
                 (j.src = "https://marionnaud.sourdline.com/img/ClearTchat.png"),
-                (R[s] = ""),
-                (U[s] = ""),
-                (D[s] = "W czym możemy Ci pomóc?"),
-                (S[r] = G[r] = D[r] = function () {
+                (R["innerHTML"] = ""),
+                (U["innerHTML"] = ""),
+                (D["innerHTML"] = "W czym możemy Ci pomóc?"),
+                (S["onclick"] = G["onclick"] = D["onclick"] = function () {
                     (M *= -1), w(), T();
                 }),
-                (J[r] = function () {
-                    Y[n] = c;
+                (J["onclick"] = function () {
+                    Y["display"] = c;
                 }),
                 T(),
-                ideta_lss ? I() : (((B = E("link")).rel = "stylesheet"), (B.type = "text/css"), (B.href = "https://cdn.premiumhotel.pl/chatbot/styles.css"), C(B, f.getElementsByTagName("head")[0]), (B.onload = I)),
-                u.addEventListener(
+                chatbot_lss ? I() : (((B = E("link")).rel = "stylesheet"), (B.type = "text/css"), (B.href = "https://cdn.premiumhotel.pl/chatbot/styles.css"), C(B, document.getElementsByTagName("head")[0]), (B.onload = I)),
+                window.addEventListener(
                     "message",
                     function (t) {
                         if ("string" == typeof t.data) {
@@ -180,7 +171,7 @@ function ideta_bot_action(t, e) {
                                         (x =
                                             x ||
                                             setInterval(function () {
-                                                (f.title = e ? document.title : "Nouveau Message !"), (e = !e);
+                                                (document.title = e ? document.title : "Nouveau Message !"), (e = !e);
                                             }, 2e3));
                                     break;
                                 case "dj9y4b8":
@@ -195,5 +186,5 @@ function ideta_bot_action(t, e) {
                 );
     }
 }
-var ideta_oss, ideta_lss, ideta_bll;
-ideta_bot_action("load");
+var chatbot_oss, chatbot_lss, chatbot_bll;
+chatbot_action("load");
