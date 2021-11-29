@@ -6,46 +6,18 @@
   <title>ProjectTestChatbotIframe</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <style>
-    :root {
-      --primary: #14286e;
-    }
-
-    #ideta_i {
-      background-color: var(--primary) !important;
-      border: var(--primary) !important;
-    }
-
-    #ideta_c,
-    #ideta_c::after {
-      border: 1px solid var(--primary) !important;
-    }
-
-    #ideta_c {
-      color: var(--primary) !important;
-    }
-  </style>
 </head>
 
 <body>
   <app-root></app-root>
-  
-  <script id="chatbot-script" data-valueprimary="38b2ac" data-valuesecondary="38b2ac"
+  <script id="chatbot-script" data-primary="1976d2" data-secondary="38b2ac"
     src="https://us-central1-capable-quanta-323811.cloudfunctions.net/chatbot-interface/" type="text/javascript"
     async></script> 
-      
-  <script>
-    var urlFragments = document.getElementById("chatbot-script")
-    document.documentElement.style.setProperty('--primary', "#" + urlFragments.dataset.valueprimary)
-  </script>
 
 </body>
-
 </html>
 
-
-exports.helloWorld = (req, res) => { 
-  let message = req.query.message || req.body.message || 'var urlFragments = document.getElementById("chatbot-script");const primaryValue=urlFragments.dataset.valueprimary;const secondaryValue=urlFragments.dataset.valuesecondary;function ideta_load_bot(t){ideta_bot_action("load",t)}function ideta_bot_action(t,e){var i,a="block",n="display",o="style",c="none",s="innerHTML",r="onclick",l="localStorage",u=window,f=document,m=f.body,p=f.title,h="ideta_";function b(t){return f.getElementById(t)}function _(t){m.removeChild(t)}function k(){var t=i?["auid="+i]:[],e=f.cookie?f.cookie.split("; ").map(function(t){return{k:(t=t.split("="))[0],v:t[1]}}):[];return[].forEach(function(i){switch(i.st){case"c":var a=e.find(function(t){return t.k===i.s}),n=a&&a.v;break;case"v":n=u[i.s];break;case"l":n=function(t){try{return u[l].getItem(t)}catch(t){}}(i.s)}null!=n&&t.push(i.t+"="+n)}),`https://chatbot.premiumhotel.pl/`+t.join("&")}var g=b(h+"i"),v=b(h+"f"),y=b(h+"c");switch(t){case"remove":g&&_(g),v&&_(v),y&&_(y),ideta_bll=ideta_oss=0;break;case"show":g&&(g[o][n]="block"),v&&(v[o][n]=a);break;case"hide":g&&(g[o][n]=c),v&&(v[o][n]=c),y&&(y[o][n]=c);break;case"refresh":(B=b(h+"ff"))&&(B.src=k());break;case"load":if(ideta_oss)break;function w(){L||ideta_bll||1!==M||(z.src=k(),ideta_bll=!(L=!1))}function C(t,e){e.appendChild(t)}function E(t){return f.createElement(t||"div")}function T(){1===M?(Q[n]="block",O[n]="flex",K[n]=Y[n]=c,N()):(Q[n]=O[n]=c,K[n]=a,z.url&&z.contentWindow&&z.contentWindow.postMessage("v2bnpga",d))}function I(){C(W,S),C(F,S),C(S,m),C(z,H),C(G,H),L?(V[n]=a,q[r]=function(){X[n]=a,V[n]=a,L=!1,w()},C(j,P),C(R,P),C(U,P),C(q,P),C(P,H)):w(),C(H,m),C(D,A),C(J,A),setTimeout(function(){ideta_oss&&C(A,m)},2e3),ideta_lss=ideta_oss=!0}function N(){S.className="",clearInterval(x),x=null,f.title=p}var x,B,L=!0,M=(B="open"===e||!0===e)?1:-1,W=E("img"),j=E("img"),z=E("iframe"),S=E(),H=E(),P=E(),R=E(),U=E(),q=E(),A=E(),D=E(),F=E(),G=E(),J=E(),K=W[o],O=F[o],Q=H[o],V=z[o],X=P[o],Y=A[o];z.frameBorder="0",z.src=`https://chatbot.premiumhotel.pl/?primary=${primaryValue}&secondary=${secondaryValue}`,S.id=h+"i",W.id=h+"ii",F.id=h+"ic",H.id=h+"f",z.id=h+"ff",G.id=h+"fc",P.id=h+"fm",j.id=h+"fi",R.id=h+"ft",U.id=h+"fx",q.id=h+"fb",A.id=h+"c",D.id=h+"ct",J.id=h+"cc",W.src="https://marionnaud.sourdline.com/img/ClearTchat.png",F[s]=G[s]=J[s]="✕",j.src="https://marionnaud.sourdline.com/img/ClearTchat.png",R[s]="",U[s]="",D[s]="W czym możemy Ci pomóc?",S[r]=G[r]=D[r]=function(){M*=-1,w(),T()},J[r]=function(){Y[n]=c},T(),ideta_lss?I():((B=E("link")).rel="stylesheet",B.type="text/css",B.href="https://cdn.premiumhotel.pl/chatbot/styles.css",C(B,f.getElementsByTagName("head")[0]),B.onload=I),u.addEventListener("message",function(t){if("string"==typeof t.data){var e,i=t.data.split(";"),a=(t=i[0],i[1]);switch(t){case"z64tefu":S.className="pending",x=x||setInterval(function(){f.title=e?p:"Nouveau Message !",e=!e},2e3);break;case"dj9y4b8":N();break;case"k120eks":u.location=a}}},q[s]="https://chatbot.premiumhotel.pl/")}}var ideta_oss,ideta_lss,ideta_bll;ideta_bot_action("load");';
+<!-- exports.helloWorld = (req, res) => { 
+  let message = req.query.message || req.body.message || 'var urlFragments = document.getElementById("chatbot-script");document.documentElement.style.setProperty("--primary", "#" + urlFragments.dataset.primary);const primaryValue=urlFragments.dataset.primary;const secondaryValue=urlFragments.dataset.secondary;function ideta_load_bot(t){ideta_bot_action("load",t)}function ideta_bot_action(t,e){var i,a="block",n="display",o="style",c="none",s="innerHTML",r="onclick",l="localStorage",u=window,f=document,m=f.body,p=f.title,h="ideta_";function b(t){return f.getElementById(t)}function _(t){m.removeChild(t)}function k(){var t=i?["auid="+i]:[],e=f.cookie?f.cookie.split("; ").map(function(t){return{k:(t=t.split("="))[0],v:t[1]}}):[];return[].forEach(function(i){switch(i.st){case"c":var a=e.find(function(t){return t.k===i.s}),n=a&&a.v;break;case"v":n=u[i.s];break;case"l":n=function(t){try{return u[l].getItem(t)}catch(t){}}(i.s)}null!=n&&t.push(i.t+"="+n)}),`https://chatbot.premiumhotel.pl/`+t.join("&")}var g=b(h+"i"),v=b(h+"f"),y=b(h+"c");switch(t){case"remove":g&&_(g),v&&_(v),y&&_(y),ideta_bll=ideta_oss=0;break;case"show":g&&(g[o][n]="block"),v&&(v[o][n]=a);break;case"hide":g&&(g[o][n]=c),v&&(v[o][n]=c),y&&(y[o][n]=c);break;case"refresh":(B=b(h+"ff"))&&(B.src=k());break;case"load":if(ideta_oss)break;function w(){L||ideta_bll||1!==M||(z.src=k(),ideta_bll=!(L=!1))}function C(t,e){e.appendChild(t)}function E(t){return f.createElement(t||"div")}function T(){1===M?(Q[n]="block",O[n]="flex",K[n]=Y[n]=c,N()):(Q[n]=O[n]=c,K[n]=a,z.url&&z.contentWindow&&z.contentWindow.postMessage("v2bnpga",d))}function I(){C(W,S),C(F,S),C(S,m),C(z,H),C(G,H),L?(V[n]=a,q[r]=function(){X[n]=a,V[n]=a,L=!1,w()},C(j,P),C(R,P),C(U,P),C(q,P),C(P,H)):w(),C(H,m),C(D,A),C(J,A),setTimeout(function(){ideta_oss&&C(A,m)},2e3),ideta_lss=ideta_oss=!0}function N(){S.className="",clearInterval(x),x=null,f.title=p}var x,B,L=!0,M=(B="open"===e||!0===e)?1:-1,W=E("img"),j=E("img"),z=E("iframe"),S=E(),H=E(),P=E(),R=E(),U=E(),q=E(),A=E(),D=E(),F=E(),G=E(),J=E(),K=W[o],O=F[o],Q=H[o],V=z[o],X=P[o],Y=A[o];z.frameBorder="0",z.src=`https://chatbot.premiumhotel.pl/?primary=${primaryValue}&secondary=${secondaryValue}`,S.id=h+"i",W.id=h+"ii",F.id=h+"ic",H.id=h+"f",z.id=h+"ff",G.id=h+"fc",P.id=h+"fm",j.id=h+"fi",R.id=h+"ft",U.id=h+"fx",q.id=h+"fb",A.id=h+"c",D.id=h+"ct",J.id=h+"cc",W.src="https://marionnaud.sourdline.com/img/ClearTchat.png",F[s]=G[s]=J[s]="✕",j.src="https://marionnaud.sourdline.com/img/ClearTchat.png",R[s]="",U[s]="",D[s]="W czym możemy Ci pomóc?",S[r]=G[r]=D[r]=function(){M*=-1,w(),T()},J[r]=function(){Y[n]=c},T(),ideta_lss?I():((B=E("link")).rel="stylesheet",B.type="text/css",B.href="https://cdn.premiumhotel.pl/chatbot/styles.css",C(B,f.getElementsByTagName("head")[0]),B.onload=I),u.addEventListener("message",function(t){if("string"==typeof t.data){var e,i=t.data.split(";"),a=(t=i[0],i[1]);switch(t){case"z64tefu":S.className="pending",x=x||setInterval(function(){f.title=e?p:"Nouveau Message !",e=!e},2e3);break;case"dj9y4b8":N();break;case"k120eks":u.location=a}}},q[s]="https://chatbot.premiumhotel.pl/")}}var ideta_oss,ideta_lss,ideta_bll;ideta_bot_action("load");';
     res.status(200).send(message); 
-}; 
+};  -->
