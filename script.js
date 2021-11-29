@@ -3,30 +3,30 @@ document.documentElement.style.setProperty("--primary", "#" + urlFragments.datas
 const primaryValue = urlFragments.dataset.primary;
 const secondaryValue = urlFragments.dataset.secondary;
 
-function chatbot_load(t) {
-    chatbot_action("load", t);
+function chatbot_load(chatbot) {
+    chatbot_action("load", chatbot);
 }
-function chatbot_action(t, event) {
+function chatbot_action(chatbot, event) {
     var i;
-    function style_chatbot(t) {
-        return document.getElementById(t);
+    function style_chatbot(chatbot) {
+        return document.getElementById(chatbot);
     }
-    function change_style_chatbot(t) {
-        document.body.removeChild(t);
+    function change_style_chatbot(chatbot) {
+        document.body.removeChild(chatbot);
     }
     function k() {
-        var t = i ? ["auid=" + i] : [],
+        var chatbot = i ? ["auid=" + i] : [],
             event = document.cookie //usuwa listę ciasteczke powiązanych z dokumentem
-                ? document.cookie.split("; ").map(function (t) {
-                      return { k: (t = t.split("="))[0], v: t[1] };
+                ? document.cookie.split("; ").map(function (chatbot) {
+                      return { k: (chatbot = chatbot.split("="))[0], v: chatbot[1] };
                   })
                 : [];
         return (
             [].forEach(function (i) {
                 switch (i.st) {
                     case "c":
-                        var a = event.find(function (t) {
-                                return t.k === i.s;
+                        var a = event.find(function (chatbot) {
+                                return chatbot.k === i.s;
                             }),
                             n = a && a.v;
                         break;
@@ -34,20 +34,20 @@ function chatbot_action(t, event) {
                         n = window[i.s];
                         break;
                     case "l":
-                        n = (function (t) {
+                        n = (function (chatbot) {
                             try {
-                                return window["localStorage"].getItem(t);
-                            } catch (t) {}
+                                return window["localStorage"].getItem(chatbot);
+                            } catch (chatbot) {}
                         })(i.s);
                 }
-                null != n && t.push(i.t + "=" + n);
+                null != n && chatbot.push(i.t + "=" + n);
             }),
-            `https://chatbot.premiumhotel.pl/` + t.join("&"));
+            `https://chatbot.premiumhotel.pl/` + chatbot.join("&"));
     }
     var icon = style_chatbot("ideta_" + "i"), //g
         iframe = style_chatbot("ideta_" + "f"), //v
         question = style_chatbot("ideta_" + "c"); //y
-    switch (t) {
+    switch (chatbot) {
         case "remove":
             icon && change_style_chatbot(icon), iframe && change_style_chatbot(iframe), question && change_style_chatbot(question), (ideta_bll = ideta_oss = 0);
             break;
