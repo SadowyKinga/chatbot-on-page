@@ -1,0 +1,109 @@
+<script id="chatbot-script" data-primary="1976d2" data-secondary="38b2ac" type="text/javascript" async>
+
+var urlFragments = document.getElementById("chatbot-script");
+      const primaryValue = urlFragments.dataset.primary;
+      const secondaryValue = urlFragments.dataset.secondary;
+      console.log(primaryValue);
+  
+      var cssId = "myCss";
+      if (!document.getElementById(cssId)) {
+          var head = document.getElementsByTagName("head")[0];
+          var link = document.createElement("link");
+          link.id = cssId;
+          link.rel = "stylesheet";
+          link.type = "text/css";
+          link.href = "https://cdn.premiumhotel.pl/chatbot/styles.css";
+          link.media = "all";
+          document.documentElement.style.setProperty("--primary", "#" + urlFragments.dataset.primary);
+          head.appendChild(link);
+      }
+  
+      function closeQuestion() {
+          var x = document.getElementById("ideta_c");
+          if (x.style.display === "none") {
+              x.style.display = "block";
+          } else {
+              x.style.display = "none";
+          }
+      }
+  
+      function addElement() {
+          div = document.createElement("div"), document.body.appendChild(div)
+      };
+  
+      function openChat(e) {
+          var e = e || window.event;
+          var btnCode;
+  
+          var btn = document.getElementById("ideta_i");
+          if (btn.value == "Open") {
+              btn.value = "Close";
+  
+              var buttonImg = document.getElementById("ideta_ii")
+              buttonImg.style = "filter: none!important;"
+              buttonImg.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VisualEditor_-_Icon_-_Close_-_white.svg/1200px-VisualEditor_-_Icon_-_Close_-_white.svg.png";
+  
+              div.id = "ideta_f", div.style = "display: none";
+  
+              document.getElementById("ideta_ct").style = 'display: none'
+              document.getElementById("ideta_cc").style = 'display: none'
+  
+              var divIframe = document.getElementById("ideta_f");
+              var iframe = document.createElement("iframe");
+              var divCloseChat = document.createElement("div");
+  
+              iframe.id = "ideta_ff";
+              iframe.src = `https://chatbot.premiumhotel.pl/?primary=${primaryValue}&secondary=${secondaryValue}`;
+              iframe.style = "border: 0"
+  
+              divCloseChat.id = "ideta_fc";
+              divCloseChat.textContent = "✕"
+              divCloseChat.onclick = function () {
+                  openChat(event)
+              }
+  
+              divIframe.appendChild(iframe);
+              divIframe.appendChild(divCloseChat);
+  
+              var y = document.getElementById("ideta_f");
+              if (y.style.display === "none") {
+                  y.style.display = "block";
+              } else {
+                  y.style.display = "none";
+              }
+          }
+          else {
+              btn.value = "Open";
+              document.getElementById("ideta_ii").style = "filter: block!important;"
+              document.getElementById("ideta_ii").src = "https://marionnaud.sourdline.com/img/ClearTchat.png";
+              div.id = "ideta_f", div.style = "display: none"
+          }
+      }
+  
+      addElement(), div.id = "ideta_i", div.value = "Open";
+      var divImg = document.getElementById("ideta_i");
+      var img = document.createElement("img");
+      img.id = "ideta_ii";
+      img.src = `https://marionnaud.sourdline.com/img/ClearTchat.png`;
+      img.onclick = function () {
+          openChat(event)
+      }
+      divImg.appendChild(img);
+  
+      setTimeout(function () {
+          addElement(), div.id = "ideta_c";
+          var divQuestion = document.getElementById("ideta_c");
+          var div1 = document.createElement("div");
+          var div2 = document.createElement("div");
+          div1.id = "ideta_ct";
+          div1.textContent = "W czym możemy Ci pomóc?"
+          div2.id = "ideta_cc";
+          div2.textContent = "✕"
+          div2.onclick = function () {
+              closeQuestion()
+          }
+          divQuestion.appendChild(div1);
+          divQuestion.appendChild(div2);
+      }, 3000);
+
+</script>

@@ -4,6 +4,7 @@ const secondaryValue = urlFragments.dataset.valuesecondary;
 function chatbot_load(t) {
     chatbot_action("load", t);
 }
+
 function chatbot_action(t, e) {
     var i,
         a = "block",
